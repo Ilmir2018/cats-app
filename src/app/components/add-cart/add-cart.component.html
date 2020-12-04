@@ -1,0 +1,26 @@
+<form action="/" method="post" [formGroup]="catForms">
+  <div class="input_form">
+    <label for="name">Имя</label>
+    <input type="text" #name class="form_input"
+      formControlName="name">
+  </div>
+  <div class="input_form">
+    <label for="description">Характеристика</label>
+    <input type="text" #description class="form_input"
+      formControlName="description">
+  </div>
+  <div class="input_form">
+    <label for="likes">Количество лайков</label>
+    <input type="text" #likes class="form_input"
+      formControlName="likes">
+  </div>
+  <div class="input_form">
+    <label for="image">Путь к изображению</label>
+    <input type="text" #image class="form_input"
+      formControlName="image">
+  </div>
+  <div class="form_btn">
+    <button class="order_a_set" (click)="add(name.value, description.value, likes.value, image.value)" 
+    [disabled]="catForms.invalid">Добавить</button>
+  </div>
+</form>

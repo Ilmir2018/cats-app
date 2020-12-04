@@ -1,0 +1,45 @@
+.cats {
+    display        : flex;
+    justify-content: center;
+
+    .cat_list {
+        display: flex;
+
+        .cat {
+            cursor        : pointer;
+            padding-left  : 1rem;
+            display       : flex;
+            flex-direction: column;
+            align-items   : center;
+
+            .cat_link {
+                text-decoration: none;
+
+                .description {
+                    display       : flex;
+                    flex-direction: column;
+                    align-items   : center;
+
+                    .cat_img {
+                        width : 200px;
+                        height: 200px;
+                    }
+
+                    .cat_description {
+                        text-align: center;
+                        width: 200px;
+                    }
+                }
+            }
+
+            .likes {
+                margin-top: 2rem;
+
+                .likes_count {
+                    padding: 0.5rem;
+                }
+
+            }
+        }
+    }
+}

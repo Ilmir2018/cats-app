@@ -1,0 +1,21 @@
+<div class="cont" *ngIf="cat">
+  <div class="description">
+    <h2>{{cat.name}}</h2>
+    <p>{{cat.description}}</p>
+    <img [src]=cat.img alt="">
+  </div>
+  <div class="control_panel">
+    <a class="editing" routerLink="/editing/{{cat.id}}">Редактирование карточки</a>
+    <button class="deleted" (click)="deleted()">Удалить</button>
+  </div>
+</div>
+
+<div class="deleted_window" *ngIf="delete">
+  <div class="window">
+    <p class="window_text">Вы уверены?</p>
+    <div class="window_btn">
+      <button (click)="deleteCat(cat)">Да</button>
+      <button (click)="deleted()">Нет</button>
+    </div>
+  </div>
+</div>

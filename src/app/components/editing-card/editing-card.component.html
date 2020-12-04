@@ -1,0 +1,23 @@
+<div *ngIf="cat" class="cont">
+  <form action="/" method="post" [formGroup]="catEdit">
+    <div class="input_form">
+      <label for="name">Имя</label>
+      <input type="text" class="form_input" [(ngModel)]="cat.name" formControlName="name">
+    </div>
+    <div class="input_form">
+      <label for="description">Характеристика</label>
+      <input type="text" class="form_input" [(ngModel)]="cat.description" formControlName="description">
+    </div>
+    <div class="input_form">
+      <label for="likes">Количество лайков</label>
+      <input type="text" class="form_input" [(ngModel)]="cat.like" formControlName="likes">
+    </div>
+    <div class="input_form">
+      <label for="image">Путь к изображению</label>
+      <input type="text" class="form_input" [(ngModel)]="cat.img" formControlName="image">
+    </div>
+    <div class="form_btn">
+      <button class="order_a_set" (click)="editing()" [disabled]="catEdit.invalid">Сохранить</button>
+    </div>
+  </form>
+</div>

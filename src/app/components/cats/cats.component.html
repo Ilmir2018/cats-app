@@ -1,0 +1,18 @@
+<div class="cats">
+  <ul class="cat_list">
+    <li class="cat" *ngFor="let cat of cats; let i = index;">
+      <a class="cat_link" routerLink="/cats/{{cat.id}}">
+        <div class="description">
+          <h2 class="cat_name">{{cat.name}}</h2>
+          <img class="cat_img" [src]=cat.img alt="Котик">
+          <p class="cat_description">{{cat.description}}</p>
+        </div>
+      </a>
+      <div class="likes">
+        <button (click)="toggleLike(1, cat)">+</button>
+        <span class="likes_count">{{cat.like}}</span>
+        <button (click)="toggleLike(0, cat)">-</button>
+      </div>
+    </li>
+  </ul>
+</div>
